@@ -1,0 +1,22 @@
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "qask"
+version = "0.1.0"
+description = "A CLI tool for asking questions to Ollama models"
+authors = [{name = "Your Name", email = "your.email@example.com"}]
+dependencies = [
+    "typer[all]",
+    "rich",
+    "asyncio",
+    "aiohttp"
+]
+requires-python = ">=3.7"
+
+[project.scripts]
+qask = "qask.qask:app"
+
+[tool.hatch.build.targets.wheel]
+packages = ["qask"]
+
